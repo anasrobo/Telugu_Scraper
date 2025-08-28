@@ -1,0 +1,14 @@
+{
+  "name": "telugu-cleaner-monorepo",
+  "private": true,
+  "version": "1.0.0",
+  "scripts": {
+    "dev": "npm run dev --prefix backend & npm run dev --prefix frontend",
+    "start": "node backend/server.js",
+    "postinstall": "npm install --prefix backend && npm install --prefix frontend",
+    "heroku-postbuild": "npm install --prefix backend && npm install --prefix frontend && npm run build --prefix frontend"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
